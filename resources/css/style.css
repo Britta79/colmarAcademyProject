@@ -2,7 +2,7 @@ html {
   font-size: 16px;
   width: 100%;
   height: 100%;
-  color: #404040;
+  color: #383938;
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
 }
@@ -14,6 +14,8 @@ body {
 
 
 /*header*/
+
+
 
 #section1 {
   display: flex;
@@ -27,8 +29,7 @@ body {
    align-items: center;
    flex-grow: 1;
    margin-left: 24px;
-   height: 32px;
- }
+}
 
 
 #section1 img {
@@ -42,7 +43,7 @@ height: 32px;
 }
 
 .academy {
-  color: #A0A0A0;
+  color: #777977;
 }
 
 nav {
@@ -54,17 +55,44 @@ nav span {
 }
 
 .sign-in a {
-  color: #404040;
+  color: #777977;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: none;
+  transition-timing-function: linear;
+  transition-delay: none;
 }
 
+.sign-in a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.mobile-header {
+  display:none;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-around;
+    height: 64px;
+   }
+   #section1 {
+     display:none;
+   }
+
+}
 /*learn something new*/
 
 #container1 {
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #E0E0E0;
+  justify-content: center;
+  background-color: #dad8d8;
 }
 
 .left-panel1 {
@@ -88,14 +116,45 @@ nav span {
   color: white;
   font-size: 1rem;
   transition-property: background;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
+  transition-duration: none;
+  transition-timing-function: linear;
   transition-delay: none;
 }
 
 .right-panel1 button:hover {
-  background: #0066CC; 
+  background: #9d9f9e;
+  border: 1px solid white;
   }
+
+@media only screen and (max-width: 480px) {
+
+  #container1 {
+    display:flex;
+    flex-direction: column;
+  }
+   .left-panel1 , .right-panel1 {
+     width: 100%;
+   }
+
+   .right-panel1 h1 , .right-panel1 h3{
+    margin-left: 16px;
+  }
+    .right-panel1 button {
+      background: #797c7a;
+      margin-top:24px;
+      margin-bottom: 32px;
+      text-align: center;
+      margin-right: 16px;
+      margin-left: 16px;
+      transition-property: background;
+      transition-duration: none;
+      transition-timing-function: linear;
+      transition-delay: none;
+    }
+    .right-panel1 button:hover {
+      background: #a2a4a3;
+    }
+}
 
 
 /*keep practicing*/
@@ -120,12 +179,12 @@ nav span {
 }
 
 .left-panel2 p {
-  color: #A0A0A0;
+  color: #777977;
 }
 
+
 .left-panel2 .author {
-  color: #808080;
-  font-size: 0.8rem;
+  color: #424342;
 }
 
 
@@ -143,6 +202,10 @@ nav span {
   padding: 16px;
 }
 
+.right-panel2 .lecture {
+  background-color: #dad8d8;
+}
+
 .orientation img {
   padding-bottom: 16px;
   padding-right: 16px;
@@ -150,21 +213,54 @@ nav span {
 }
 
 .orientation-text p , .campus-text p , .lecture-text p {
-  color: #A0A0A0;
+  color: #777977;
 }
 
 .orientation-text a , .campus-text a , .lecture-text a {
   color: #0066CC;
   text-decoration: none;
+  transition-property: all;
+  transition-duration: none;
+  transition-timing-function: linear;
+  transition-delay: none;
+}
+
+.orientation-text a:hover , .campus-text a:hover , .lecture-text a:hover{
+  color: #6d9dfe;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .left-panel2 {
+    display:none;
+  }
+  .right-panel2 {
+    width: 100%;
+  }
+  .orientation , .campus , .lecture {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: left;
+  }
+  .orientation img , .campus img , .lecture img {
+    width: 100%;
+  }
+  .right-panel2 .lecture {
+    background-color: white;
+  }
 
 }
+
 
 /*courses*/
 
 #container3 {
   display: flex;
   flex-direction: column;
-  background-color: #E0E0E0;
+  background-color: #e9e7e7;
   max-width: 100%;
 }
 
@@ -199,9 +295,44 @@ nav span {
 }
 
 .courses p {
-  color: #A0A0A0;
+  color: #777977;
 }
 
+.mobile-learning {
+  display:none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .courses {
+    display:none;
+  }
+  .mobile-learning{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #container3 {
+    background-color: white;
+  }
+  .mobile-course h3 {
+    background-color:  #e9e7e7;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    transition-property: all;
+    transition-duration: none;
+    transition-timing-function: linear;
+    transition-delay: none;
+   }
+   .mobile-course h3:hover {
+    background-color:  #b9bbba; 
+   }
+}
 
 /*thesis*/
 
@@ -242,7 +373,7 @@ nav span {
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #E0E0E0;
+  background-color: #dad8d8;
 }
 
 .new-york {
@@ -261,16 +392,30 @@ nav span {
 }
 
 .left-panel3 p {
-  color: #A0A0A0;
+  color: #777977;
 }
 
 .fisma-text p {
- color: #A0A0A0;
+ color: #777977;
 }
 
 .new-york-text p {
-  color: #A0A0A0;
+  color:  #777977;
 }
+
+@media only screen and (max-width: 480px) {
+
+  .right-panel3 {
+    display: none;
+  }
+  .left-panel3 {
+    width: 100%;
+  }
+  .left-panel3 h3 , .left-panel3 p {
+    display:none;
+  }
+}
+
 /*footer*/
 
 .copyright {
@@ -282,4 +427,11 @@ nav span {
  border-top: 1px solid silver;
  color: #A0A0A0;
  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .copyright span {
+    display:none;
+  }
 }
