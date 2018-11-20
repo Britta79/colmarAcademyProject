@@ -169,7 +169,7 @@ nav span {
 
 .right-section2 {
     width: 40%;
-    padding-top: 32px;
+    padding-top: 16px;
 }
 
 .left-section2 {
@@ -197,18 +197,15 @@ nav span {
  align-items: center;
 }
 
-.orientation .img-desktop , .campus .img-desktop , .lecture .img-desktop {
- width: 35%;
- height: auto;
-}
 
 .orientation .img-desktop {
-  padding-bottom: 16px;
+  width:35%;
+  padding-left:16px;
   padding-right: 16px;
-  padding-left: 16px;
 }
 
-.campus .img-desktop, .lecture .img-desktop{
+.campus .img-desktop, .lecture .img-desktop {
+  width:35%;
   padding: 16px;
 }
 
