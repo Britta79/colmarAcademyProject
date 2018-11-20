@@ -2,8 +2,8 @@ html {
   font-size: 16px;
   width: 100%;
   height: 100%;
-  color: #383938;
-  font-family: 'Nunito', sans-serif;
+  color: #525257;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
@@ -14,7 +14,6 @@ body {
 
 
 /*header*/
-
 
 
 #section1 {
@@ -42,10 +41,6 @@ height: 32px;
   font-weight:bold;
 }
 
-.academy {
-  color: #777977;
-}
-
 nav {
   margin-right: 24px;
 }
@@ -55,18 +50,20 @@ nav span {
 }
 
 .sign-in a {
-  color: #777977;
   text-decoration: none;
+  color: #525257;
   transition-property: color;
   transition-duration: none;
   transition-timing-function: linear;
   transition-delay: none;
 }
 
+
 .sign-in a:hover {
   color: black;
   text-decoration: underline;
 }
+
 
 .mobile-header {
   display:none;
@@ -83,34 +80,37 @@ nav span {
    #section1 {
      display:none;
    }
-
 }
+
+
 /*learn something new*/
+
+
 
 #container1 {
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #dad8d8;
+  background-color: #D3D4D5;
 }
 
-.left-panel1 {
+.left-section1 {
   width: 60%;
   padding: 32px 24px;
 }
 
-.left-panel1 img {
+.left-section1 img {
   width: 100%;
 }
 
-.right-panel1 {
+.right-section1 {
   width: 40%;
 }
 
-.right-panel1 button {
+.right-section1 button {
   border-radius: 0px;
-  width: 85%;
+  width: 92%;
   height: 34px;
   background-color: #404040;
   color: white;
@@ -121,10 +121,10 @@ nav span {
   transition-delay: none;
 }
 
-.right-panel1 button:hover {
-  background: #9d9f9e;
-  border: 1px solid white;
-  }
+.right-section1 button:hover {
+  background: #747876;
+  border: 3px solid white;
+ }
 
 @media only screen and (max-width: 480px) {
 
@@ -132,14 +132,15 @@ nav span {
     display:flex;
     flex-direction: column;
   }
-   .left-panel1 , .right-panel1 {
+   .left-section1 , .right-section1 {
      width: 100%;
+     padding-top: 0;
    }
 
-   .right-panel1 h1 , .right-panel1 h3{
+   .right-section1 h1 , .right-section1 h3{
     margin-left: 16px;
   }
-    .right-panel1 button {
+    .right-section1 button {
       background: #797c7a;
       margin-top:24px;
       margin-bottom: 32px;
@@ -151,69 +152,68 @@ nav span {
       transition-timing-function: linear;
       transition-delay: none;
     }
-    .right-panel1 button:hover {
-      background: #a2a4a3;
+    .right-section1 button:hover {
+      background: #8C8F8E;
+      border: 3px solid white;
     }
 }
 
 
 /*keep practicing*/
 
+
+
 #container2 {
   display: flex;
 }
 
-.right-panel2 {
+.right-section2 {
     width: 40%;
     padding-top: 32px;
 }
 
-.left-panel2 {
+.left-section2 {
   width: 60%;
   padding: 32px 24px;
 }
 
-.left-panel2 img {
+.left-section2 img {
  width: 100%;
  height: auto;
 }
 
-.left-panel2 p {
-  color: #777977;
+
+.left-section2 .author {
+  color: black;
+  font-size: 0.9rem;
 }
 
-
-.left-panel2 .author {
-  color: #424342;
+.img-mobile {
+  display:none;
 }
-
 
 .orientation , .campus , .lecture {
  display: flex;
  align-items: center;
 }
 
-.orientation img , .campus img , .lecture img {
+.orientation .img-desktop , .campus .img-desktop , .lecture .img-desktop {
  width: 35%;
  height: auto;
 }
 
-.campus img , .lecture img {
-  padding: 16px;
-}
-
-.right-panel2 .lecture {
-  background-color: #dad8d8;
-}
-
-.orientation img {
+.orientation .img-desktop {
   padding-bottom: 16px;
   padding-right: 16px;
   padding-left: 16px;
 }
 
-.orientation-text p , .campus-text p , .lecture-text p {
-  color: #777977;
+.campus .img-desktop, .lecture .img-desktop{
+  padding: 16px;
+}
+
+.right-section2 .lecture {
+  background-color: #D3D4D5;
 }
 
 .orientation-text a , .campus-text a , .lecture-text a {
@@ -232,23 +232,31 @@ nav span {
 
 @media only screen and (max-width: 480px) {
 
-  .left-panel2 {
+  .left-section2 {
     display:none;
   }
-  .right-panel2 {
+  .right-section2 {
     width: 100%;
+  }
+  .img-desktop {
+    display:none;
   }
   .orientation , .campus , .lecture {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .orientation .img-mobile,  .campus .img-mobile  , .lecture .img-mobile {
+    display: flex;
+    width: 92%;
     margin-left: 16px;
     margin-right: 16px;
-    text-align: left;
   }
-  .orientation img , .campus img , .lecture img {
-    width: 100%;
+  .orientation-text , .campus-text , .lecture-text {
+    margin-left: 16px;
   }
-  .right-panel2 .lecture {
+
+    .right-section2 .lecture {
     background-color: white;
   }
 
@@ -257,10 +265,12 @@ nav span {
 
 /*courses*/
 
+
+
 #container3 {
   display: flex;
   flex-direction: column;
-  background-color: #e9e7e7;
+  background-color: #EAEBEC;
   max-width: 100%;
 }
 
@@ -294,9 +304,6 @@ nav span {
   height:auto;
 }
 
-.courses p {
-  color: #777977;
-}
 
 .mobile-learning {
   display:none;
@@ -317,7 +324,7 @@ nav span {
     background-color: white;
   }
   .mobile-course h3 {
-    background-color:  #e9e7e7;
+    background-color: #D3D4D5;
     padding-top: 16px;
     padding-bottom: 24px;
     padding-left: 16px;
@@ -330,11 +337,15 @@ nav span {
     transition-delay: none;
    }
    .mobile-course h3:hover {
-    background-color:  #b9bbba; 
+    background-color:  #EAEBEC;
    }
 }
 
+
+
 /*thesis*/
+
+
 
 #container4 {
   display: flex;
@@ -352,18 +363,18 @@ nav span {
   margin-top:32px;
 }
 
-.left-panel3 {
+.left-section3 {
   width: 60%;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 24px;
 }
 
-.left-panel3 video {
+.left-section3 video {
   width: 100%;
 }
 
-.right-panel3 {
+.right-section3 {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -373,7 +384,7 @@ nav span {
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #dad8d8;
+  background-color: #D3D4D5;
 }
 
 .new-york {
@@ -391,32 +402,23 @@ nav span {
   width: 65%;
 }
 
-.left-panel3 p {
-  color: #777977;
-}
-
-.fisma-text p {
- color: #777977;
-}
-
-.new-york-text p {
-  color:  #777977;
-}
 
 @media only screen and (max-width: 480px) {
 
-  .right-panel3 {
+  .right-section3 {
     display: none;
   }
-  .left-panel3 {
+  .left-section3 {
     width: 100%;
   }
-  .left-panel3 h3 , .left-panel3 p {
+  .left-section3 h3 , .left-section3 p {
     display:none;
   }
 }
 
+
 /*footer*/
+
 
 .copyright {
  display: flex;
@@ -425,8 +427,16 @@ nav span {
  padding-left: 24px;
  padding-top: 16px;
  border-top: 1px solid silver;
- color: #A0A0A0;
- font-size: 0.8rem;
+ font-size: 0.9rem;
+ transition-property: all;
+ transition-duration: none;
+ transition-timing-function: linear;
+ transition-delay: none;
+}
+
+.copyright span:hover {
+ color: black;
+ text-decoration: underline;
 }
 
 @media only screen and (max-width: 480px) {
